@@ -1,0 +1,54 @@
+{this.state.enteries.map((entry, index) => (
+                <Grid item xs={12} sm={6} key={entry.id}>
+                  <Card className={classes.card}>
+                    <CardContent className={classes.content}>
+                      <div className={classes.dateDetails}>
+                        <Typography className={classes.title} color="textSecondary" gutterBottom>
+                          Your Update On {entry.time}
+                        </Typography>
+                      </div>
+                      <div className={classes.details}>
+                        <Typography variant="h5" component="h2"></Typography>
+                        <Typography className={classes.pos} color="textSecondary">
+                          How You Felt
+                        </Typography>
+                        <Typography variant="body2" component="p">
+                          {entry.feeling}
+                        </Typography>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Grid>
+              ))}
+
+card: {
+      minWidth: 275,
+      display: 'flex'
+    },
+    details: {
+      display: 'flex',
+      flexDirection: 'column'
+    },
+    dateDetails: {
+      display: 'flex',
+      flexDirection: 'column',
+      flex: '1 0 auto'
+    },
+    content: {
+      flex: '1 0 auto'
+    },
+    bullet: {
+      display: 'inline-block',
+      margin: '0 2px',
+      transform: 'scale(0.8)'
+    },
+    title: {
+      fontSize: 14
+    },
+    pos: {
+      marginBottom: 12
+    },
+    paperEntry: {
+      padding: 10,
+      marginBottom: 10
+    }
